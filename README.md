@@ -28,6 +28,12 @@ This Tutorial is a Part of RPI NAS Server. If you do not want ssd boot and  pref
   
 ### Before starting, we need external monitor / VNC remote desktop access or SSH access to the Raspberry Pi.
 Tutorail link for VNC and SSH https://github.com/smartsreenath/Raspberry-Pi-VNC-Install
-
+ 
+Prepairing SD Card: 
+  - If you have already running pi with new OS and SSh enabled, skip these. Otherwise follow steps from this tutorial.
+  - https://github.com/smartsreenath/Raspberry-Pi-VNC-Install (contains sd card setup, SSh setup and VNC install)
+  
+Prepairing SSD
+ - Format SSD  
 
 
