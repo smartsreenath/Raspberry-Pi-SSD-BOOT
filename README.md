@@ -55,11 +55,61 @@ sudo apt full-upgrade
 ```sh
 sudo reboot now
 ```
+6. Connect SSD and Boot the PI
+7. 	When you’re back on your desktop, go to your menu, then accessories and then SD Card Copier. This will open a simple window with a dropdown list. Select your SD card as the “from” target and your SSD as your “to” target. Then click on Start and Yes to continue. This will partition your SSD and copy the contents of your SD card to each partition.
 
+![This is an image](https://i.imgur.com/xuNmnhN.jpg)
+8. It will take some time.
+9. Now we  have to tell the Pi to boot from the SSD instead of the SD card
+10.	For that we need new bootloader for pi
+11.	Open up a new terminal window and enter the following command
+```sh
+sudo rpi-eeprom-update -d -a
+```
+12.	Next, open up the configuration tool, type
+```sh
+sudo raspi-config
+```
+13.	Go to 6 “Advanced Options”  
 
- 
+![This is an image](https://i.imgur.com/fpiWU3b.jpg)
+14. Then A7 “Bootloader Version”
 
- 
+![This is an image](https://i.imgur.com/x7ghiE8.jpg)
+15.	Select the first option E1 Latest Use the latest version boot ROM software
+
+![This is an image](https://i.imgur.com/ObLJyMZ.jpg)
+16.	Then select “Ok”
+17.	Then “No” (so that it doesn’t revert to defaults)
+	
+![This is an image](https://i.imgur.com/JTNhFB4.jpg)
+18.	Then Click “OK” for BOOT ROM not reset to defaults 
+
+![This is an image](https://i.imgur.com/kiLcBXz.jpg)
+19.	Go back to 6 “Advanced Options”
+
+![This is an image](https://i.imgur.com/fpiWU3b.jpg)
+20.	Select A6 “Boot Order”
+
+![This is an image](https://i.imgur.com/TtPRjXb.jpg)
+21.	Select the second option B2 “USB Boot Boot from USB if available, otherwise boot from SD card”
+
+![This is an image](https://i.imgur.com/9JFYpDy.jpg)
+22.	Then “Finish” and then select “No” when asked if you would like to reboot
+23.	Shutdown the pi
+24.	Remove power source
+25.	Remove SD Card
+26.	Boot the pi ..
+
+### TEST SSD SPEED
+   - Quick and basic write test by opening up our terminal
+```sh
+dd if=/dev/zero of=./speedTestFile bs=20M count=5 oflag=direct
+```
+  - Reading the same file with the following command
+```sh
+dd if=./speedTestFile of=/dev/zero bs=20M count=5 oflag=dsync
+```
 
 
 
