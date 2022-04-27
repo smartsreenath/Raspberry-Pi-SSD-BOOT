@@ -24,16 +24,42 @@ This Tutorial is a Part of RPI NAS Server. If you do not want ssd boot and  pref
   - New OS update
   - New firmware update
   - New Bootloader
-  - Compatible USB Adapters
+  - Compatible USB Adapters 
+   Contains a huge list of compatible USB Adapters for this Project by James A. Chambers
+   https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/
   
 ### Before starting, we need external monitor / VNC remote desktop access or SSH access to the Raspberry Pi.
 Tutorail link for VNC and SSH https://github.com/smartsreenath/Raspberry-Pi-VNC-Install
  
-Prepairing SD Card: 
-  - If you have already running pi with new OS and SSh enabled, skip these. Otherwise follow steps from this tutorial.
-  - https://github.com/smartsreenath/Raspberry-Pi-VNC-Install (contains sd card setup, SSh setup and VNC install)
+1. Prepairing SD Card: 
+   - If you have already running pi with new OS and SSh enabled, skip these. Otherwise follow steps from this tutorial.
+   - https://github.com/smartsreenath/Raspberry-Pi-VNC-Install (contains sd card setup, SSh setup and VNC install)
   
-Prepairing SSD
- - Format SSD  
+2. Prepairing SSD
+   - Format SSD  in PC
+3.	Download Putty and Install [Putty](https://www.putty.org/) (Click for the Link)
+    - Open putty, select ssh, then enter the IP address and click open
+    - IF asking any permission click accept and Enter
+4.	Enter username: pi
+    - Password: ***** (enter the password given during flashing raspberry pi using raspberry pi imager) (default password is “ raspberry ”)
+
+5.	First you need update the OS. Type the below commands on putty
+```sh
+sudo apt update
+```
+```sh
+sudo apt full-upgrade
+```
+6.	Type “Y” for yes
+7.	Reboot PI, Type
+```sh
+sudo reboot now
+```
+
+
+ 
+
+ 
+
 
 
