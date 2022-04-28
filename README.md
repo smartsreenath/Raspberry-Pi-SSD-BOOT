@@ -121,6 +121,6 @@ dd if=/dev/zero of=./speedTestFile bs=20M count=5 oflag=direct
 ```sh
 dd if=./speedTestFile of=/dev/zero bs=20M count=5 oflag=dsync
 ```
-
+:joystick:
 
 
